@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADYAR APARTMENTS - Grouting Work Tracker</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #0b192c;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="appFrame" src="" allow="camera; clipboard-write;"></iframe>
 
+  <script>
+    // Base Google Apps Script Deployment URL
+    const BASE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwm54-Yrr5JjLbC4TwqoBDKjFzbEvRknhEVEw_L2-nzKtOpMKIunPZznSNMJYOt52M/exec";
+
+    // Forward URL parameters (e.g. ?mode=resident or ?mode=admin) into the iframe
+    const urlParams = window.location.search;
+    document.getElementById("appFrame").src = BASE_SCRIPT_URL + urlParams;
+  </script>
+</body>
+</html>
